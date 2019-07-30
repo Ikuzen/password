@@ -33,7 +33,8 @@ import {FormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [RandomizerNumericInputComponent,NumericalPasswordInputComponent,PasswordViewerComponent],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

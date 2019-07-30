@@ -1,18 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-// import {NumericalPasswordInputComponent} from './../numerical-password-input.component'
-@Component({
-  selector: 'app-randomizer-numeric-input',
-  templateUrl: './randomizer-numeric-input.component.html',
-  styleUrls: ['./randomizer-numeric-input.component.scss']
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
 })
-export class RandomizerNumericInputComponent implements OnInit {
+export class RandomGenerationService {
   randomInput:number[];
   
   constructor() { 
     this.randomInput = [0,1,2,3,4,5,6,7,8,9,null,null];
     this.randomInput = this.shuffle(this.randomInput);
   }
-  ngOnInit(){}
   shuffle(array:number[]):number[] {
     var currentIndex = array.length, temporaryValue, randomIndex;
   
